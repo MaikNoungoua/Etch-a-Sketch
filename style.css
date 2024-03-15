@@ -1,14 +1,28 @@
-body{
-    
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+/*body{
+    color: #fff;
+    font-family :"Nunito Semibold";
+    text-align: center;
   
-}
+}*/
 
 #main{
-    border: 5px solid red;
-    height: 800px;
-    width: 800px;
+    max-width: 906px;
+    margin: 0 auto; 
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
 }
+
+.tiles{
+    background-color: #3bbced;
+    padding: 30px;
+    /*border: solid 4px;*/
+}
+
+.tiles:nth-child(even){
+    background-color: #777;
+}
+/*.tiles{
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+}*/

@@ -1,28 +1,24 @@
-let round = Math.round; //used to change any string in integer
-const userRequest = round(prompt("Please enter your name", "This is a number between 1 and 20"));
-
-let gridSize = [userRequest,userRequest];
-//console.log(gridSize);
-
-//creation of the main container with the red border
-
-const mainContainer  = document.createElement("div");
-mainContainer.setAttribute("id","main");
-mainContainer.textContent = "Here is the div mate";
-
-document.body.appendChild(mainContainer);
 
 
-// creation of the inner tiles
+//definition of the grid size
+const rows = prompt("How many rows in the grid?");
+const columns = prompt("How mamy colums in the grid?");
 
+//Get the grid element Id
+const gridContainer = document.getElementById("main");
 
+for (i = 0; i < rows; i++) {
+    for (j = 0; j < columns; j++){
+        // Create a grid item element
+        const gridItem = document.createElement("div");
+        gridItem.className = 'tiles';
+        gridItem.textContent = `Cell ${i + 1}-${j + 1}`;
 
-for (i = 1; i < userRequest + 1;){
-    const innerDiv = document.createElement("div");
-    innerDiv.setAttribute("class","tiles");
-    mainContainer.appendChild(innerDiv);
-    innerDiv.textContent = `I am tile number ${i}`; 
-    i++;
+        //Append the grid to the grid container
+        gridContainer.appendChild(gridItem)
+    }
 }
+
+
 
 
