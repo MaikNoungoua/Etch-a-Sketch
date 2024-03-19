@@ -1,9 +1,9 @@
-/*body{
-    color: #fff;
+body{
+    
     font-family :"Nunito Semibold";
     text-align: center;
   
-}*/
+}
 
 #main{
     max-width: 906px;
@@ -15,11 +15,13 @@
 .tiles{
     background-color: #3bbced;
     padding: 30px;
+    text-align: center;
     /*border: solid 4px;*/
 }
 
 .tiles:nth-child(even){
     background-color: #777;
+    text-align: center;
 }
 /*.tiles{
     width: 100px;
