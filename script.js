@@ -6,7 +6,7 @@ const columns = prompt("How mamy colums in the grid?");
 const tileGenerated = []; //contains the different tiles id
 const divTiles = [];
 
-let randomColor = function random_bg_color() {
+let a = function random_bg_color() {
     let x = Math.floor(Math.random() * 256);
     let y = Math.floor(Math.random() * 256);
     let z = Math.floor(Math.random() * 256);
@@ -43,7 +43,11 @@ parentDiv.addEventListener("mouseover", (event) => {
     if (tileGenerated.includes(event.target.id)) {
 
         let tiles = document.getElementById(event.target.id);
-        tiles.style.background = '#777';
+        let randomColor = Math.floor(Math.random()*16777215).toString(16);
+        //tiles.style.background = '#777';
+        
+        tiles.style.background = `#${randomColor}`;
+        tiles.style.opacity = 0.33;
     }
 })
 
