@@ -6,13 +6,7 @@ const columns = prompt("How mamy colums in the grid?");
 const tileGenerated = []; //contains the different tiles id
 const divTiles = [];
 
-let a = function random_bg_color() {
-    let x = Math.floor(Math.random() * 256);
-    let y = Math.floor(Math.random() * 256);
-    let z = Math.floor(Math.random() * 256);
-    let bgColor = "rgb(" + x + "," + y + "," + z + ")";
-    return bgColor
-}
+
 
 //Get the grid element Id
 const gridContainer = document.getElementById("main");
